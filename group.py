@@ -31,27 +31,27 @@ group = {
     }
 }
 
-#the maximum age of people in the group
-ages = []
-numsOfRelation = []
-agesWithRelation = []
-agesWithFriend = []
-for ppl, info in group.items():
-    age = info["age"]
-    ages.append(age)
+if __name__ == '__main__':
+    ages = []
+    numsOfRelation = []
+    agesWithRelation = []
+    agesWithFriend = []
+    for ppl, info in group.items():
+        age = info["age"]
+        ages.append(age)
 
-    numOfRelation = len(info["relations"])
-    numsOfRelation.append(numOfRelation)
+        numOfRelation = len(info["relations"])
+        numsOfRelation.append(numOfRelation)
 
-    if len(info['relations']) != 0:
-        agesWithRelation.append(age)
+        if len(info['relations']) != 0:
+            agesWithRelation.append(age)
 
-    for ppls, relation in info["relations"].items():
-        if "friend" in relation:
-            agesWithFriend.append(age)
+        for ppls, relation in info["relations"].items():
+            if "friend" in relation:
+                agesWithFriend.append(age)
 
 
-print(max(ages))
-print(max(numsOfRelation))
-print(max(agesWithRelation))
-print(max(agesWithFriend))
+    print(max(ages))
+    print(max(numsOfRelation))
+    print(max(agesWithRelation))
+    print(max(agesWithFriend))
