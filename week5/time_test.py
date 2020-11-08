@@ -1,9 +1,10 @@
 import pytest
 from times import compute_overlap_time, time_range
 import yaml
+import os
 
 
-with open('fixture.yaml', 'r') as e:
+with open(os.path.join(os.path.dirname(__file__),'fixture.yaml'), 'r') as e:
     fixture = yaml.safe_load(e)
     print(fixture)
 
