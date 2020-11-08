@@ -5,11 +5,6 @@ python:
 # command to install dependencies
 install:
   - pip install requests pyyaml pytest pytest-cov
-deploy:
-  file: 'fixture.yaml'
-  provider: releases
-  api_key: e3a9b3aef7f16a18e0a8f5e1f9f37eec470ad452
-  skip_cleanup: true
 # command to run tests
 script:
   - pytest --cov
