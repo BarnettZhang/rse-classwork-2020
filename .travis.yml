@@ -13,6 +13,6 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - pytest
+  - pytest time_test.py
 virtualenv:
   system_site_packages: true
