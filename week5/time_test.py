@@ -19,7 +19,10 @@ def test_time_range_overlap(test_name):
     expected_overlap = [(start, stop) for start, stop in properties['expected']]
     assert compute_overlap_time(first_range, second_range) == expected_overlap
 
+
 def test_negative_time_range():
     with pytest.raises(ValueError) as e:
         time_range("2010-01-12 10:00:00", "2010-01-12 09:30:00")
         assert e.match('The end of the time range has to come strictly after its start.')
+
+
